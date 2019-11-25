@@ -1,7 +1,7 @@
-const chalk = require('chalk');
-const clear = require('clear');
-const figlet = require('figlet');
-
+import chalk from 'chalk';
+import clear from 'clear';
+import figlet from 'figlet';
+import inquirer from 'inquirer';
 import arg from 'arg';
 
 function parseArgumentsIntoOptions(rawArgs) {
@@ -23,6 +23,39 @@ function parseArgumentsIntoOptions(rawArgs) {
   };
 }
 
+async function promtForMissingOptions(options) {
+  const defaultTemplate = 'CSS';
+  if (options.skipPromts) {
+    return {
+      ...options,
+      template: options.template || defaultTemplate,
+    }
+  }
+
+  const questions = [];
+  if (!options.template) {
+    questions.push({
+      type: 'list',
+      name: 'template',
+      message: 'Please choose which CSS-preprocessor (or not) to use',
+      choices: ['CSS', 'SASS', 'LESS'],
+      default: defaultTemplate,
+    })
+  }
+
+  const answers = await inquirer.prompt(questions);
+  return {
+    ...options,
+    template: options.template || answers.template,
+  }
+}
+
+export async function cli(args) {
+  let options = parseArgumentsIntoOptions(args);
+  options = await promtForMissingOptions(options);
+  console.log(options);
+}
+
 clear();
 
 console.log(
@@ -30,8 +63,3 @@ console.log(
     figlet.textSync('BitrixWebpack', { horizontalLayout: 'full' })
   )
 );
-
-export function cli(args) {
-  let options = parseArgumentsIntoOptions(args);
-  console.log(options);
-}
