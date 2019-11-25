@@ -1,0 +1,43 @@
+{
+  "name": "bitrix-webpack",
+  "version": "0.1.0",
+  "description": "webpack template for bitrix",
+  "main": "src/index.js",
+  "bin": {
+    "bitrix-webpack": "bin/bitrix-webpack"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sedovdmitry/bitrix-template.git"
+  },
+  "keywords": [
+    "bitrix",
+    "webpack",
+    "cli"
+  ],
+  "author": "Dmitry Sedov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sedovdmitry/bitrix-template/issues"
+  },
+  "homepage": "https://github.com/sedovdmitry/bitrix-template#readme",
+  "dependencies": {
+    "arg": "^4.1.1",
+    "chalk": "^3.0.0",
+    "clear": "^0.1.0",
+    "clui": "^0.3.6",
+    "configstore": "^5.0.0",
+    "esm": "^3.2.25",
+    "figlet": "^1.2.4",
+    "inquirer": "^7.0.0",
+    "lodash": "^4.17.15",
+    "minimist": "^1.2.0",
+    "touch": "^3.1.0"
+  }
+}
