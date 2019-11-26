@@ -18,7 +18,7 @@ function parseArgumentsIntoOptions(rawArgs) {
     }
   );
   return {
-    skipPromts: args['--yes'] || false,
+    skipPrompts: args['--yes'] || false,
     runInstall: args['--install'] || false,
     template: args._[0],
   };
@@ -26,7 +26,7 @@ function parseArgumentsIntoOptions(rawArgs) {
 
 async function promtForMissingOptions(options) {
   const defaultTemplate = 'CSS';
-  if (options.skipPromts) {
+  if (options.skipPrompts) {
     return {
       ...options,
       template: options.template || defaultTemplate,
@@ -55,7 +55,6 @@ export async function cli(args) {
   let options = parseArgumentsIntoOptions(args);
   options = await promtForMissingOptions(options);
   await createProject(options);
-  console.log(options);
 }
 
 clear();
