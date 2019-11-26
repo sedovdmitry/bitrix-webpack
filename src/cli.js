@@ -3,6 +3,7 @@ import clear from 'clear';
 import figlet from 'figlet';
 import inquirer from 'inquirer';
 import arg from 'arg';
+import { createProject } from './main'
 
 function parseArgumentsIntoOptions(rawArgs) {
   const args = arg (
@@ -53,6 +54,7 @@ async function promtForMissingOptions(options) {
 export async function cli(args) {
   let options = parseArgumentsIntoOptions(args);
   options = await promtForMissingOptions(options);
+  await createProject(options);
   console.log(options);
 }
 

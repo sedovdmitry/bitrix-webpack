@@ -10,7 +10,7 @@
     "access": "public"
   },
   "scripts": {
-    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -34,10 +34,14 @@
     "clui": "^0.3.6",
     "configstore": "^5.0.0",
     "esm": "^3.2.25",
+    "execa": "^3.4.0",
     "figlet": "^1.2.4",
     "inquirer": "^7.0.0",
+    "listr": "^0.14.3",
     "lodash": "^4.17.15",
     "minimist": "^1.2.0",
+    "ncp": "^2.0.0",
+    "pkg-install": "^1.0.0",
     "touch": "^3.1.0"
   }
 }
