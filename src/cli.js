@@ -39,7 +39,7 @@ async function promtForMissingOptions(options) {
       type: 'list',
       name: 'template',
       message: 'Please choose which CSS-preprocessor (or not) to use',
-      choices: ['CSS', 'SASS', 'LESS'],
+      choices: ['CSS', 'SASS', 'TEST'],
       default: defaultTemplate,
     })
   }
