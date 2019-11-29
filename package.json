@@ -31,6 +31,10 @@
     "url": "https://github.com/sedovdmitry/bitrix-template/issues"
   },
   "homepage": "https://github.com/sedovdmitry/bitrix-template#readme",
+  "engines": {
+    "node": ">=10.10.0",
+    "npm": ">=6.0.0"
+  },
   "dependencies": {
     "arg": "^4.1.1",
     "chalk": "^3.0.0",
