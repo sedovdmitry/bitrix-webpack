@@ -1,7 +1,7 @@
 {
   "name": "bitrix-webpack",
   "version": "0.1.0",
-  "description": "webpack template for bitrix",
+  "description": "Автоматическая подготовка и настройка Webpack'a для Bitrix'a",
   "main": "src/index.js",
   "bin": {
     "bitrix-webpack": "bin/bitrix-webpack"
@@ -18,8 +18,12 @@
   },
   "keywords": [
     "bitrix",
-    "webpack",
-    "cli"
+    "webpack4",
+    "cli",
+    "vue2",
+    "es6",
+    "uikit3",
+    "sass"
   ],
   "author": "Dmitry Sedov",
   "license": "MIT",

@@ -38,8 +38,8 @@ async function promtForMissingOptions(options) {
     questions.push({
       type: 'list',
       name: 'template',
-      message: 'Please choose which CSS-preprocessor (or not) to use',
-      choices: ['CSS', 'SASS', 'TEST'],
+      message: 'Please choose SASS or without css-preprocessor to use',
+      choices: ['CSS', 'SASS'],
       default: defaultTemplate,
     })
   }
