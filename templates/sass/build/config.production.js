@@ -4,7 +4,7 @@ const merge = require('webpack-merge');
 const baseConfig = require('./config.base.js');
 const UglifyJSWebpackPlugin = require('uglifyjs-webpack-plugin');
 const BundleAnalyzer = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
@@ -35,7 +35,7 @@ module.exports = merge(baseConfig, {
     },
     plugins: [
         // erasing /dist folder
-        new CleanWebpackPlugin(['local/dist'], { root: ROOT_DIR, verbose: true, dry: false}),
+        new CleanWebpackPlugin({ root: ROOT_DIR, verbose: true, dry: false}),
 
         new MiniCssExtractPlugin({
             filename: '[name].[chunkhash].css', // marya.hash.css, ed.hash.css, mia.hash.css
