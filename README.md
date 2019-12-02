@@ -32,7 +32,7 @@ bitrix-webpack — одной командой разворачивает и н�
 ```html
     <script src="/local/dist/vendor.2b7f85651db9f3360f22.js"></script>
     <script src="/local/dist/custom.f9ef87764ca646e868fa.js"></script>
-</head>
+</body>
 ```
 
 <h2 id="install">Установка</h2>
