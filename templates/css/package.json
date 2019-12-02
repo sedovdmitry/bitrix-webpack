@@ -8,7 +8,7 @@
     "prod": "webpack --mode production --config build/config.production.js"  
   },
   "keywords": [],
-  "author": "Dmitry Sedov",
+  "author": "",
   "license": "ISC",
   "dependencies": {
     "esm": "3.2.25",
