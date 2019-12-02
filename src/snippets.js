@@ -1,10 +1,11 @@
 export const headerSnippet = `
+    <?require_once($_SERVER['DOCUMENT_ROOT'] . '/build/getWebpackAssets.php');?>
     <?if ($GLOBALS['VENDOR_STYLES'] !== ''):?>
         <link rel="stylesheet" href="/local/dist/<?=$GLOBALS['VENDOR_STYLES'];?>">
     <?endif;?>
     <?if ($GLOBALS['CUSTOM_STYLES'] !== ''):?>
         <link rel="stylesheet" href="/local/dist/<?=$GLOBALS['CUSTOM_STYLES'];?>">
-    <?else:?>
+    <?endif;?>
 </head>
 `;
 
