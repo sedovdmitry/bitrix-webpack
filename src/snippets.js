@@ -1,8 +1,5 @@
 export const headerSnippet = `
-
-    <?
-        require_once($_SERVER['DOCUMENT_ROOT'] . '/build/getWebpackAssets.php');
-    ?>
+    <?require_once($_SERVER['DOCUMENT_ROOT'] . '/build/getWebpackAssets.php');?>
     <?if ($GLOBALS['VENDOR_STYLES'] !== ''):?>
         <link rel="stylesheet" href="/local/dist/<?=$GLOBALS['VENDOR_STYLES'];?>">
     <?endif;?>
