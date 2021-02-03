@@ -59,7 +59,7 @@ async function addToBitrixTemplate(parentTargetDir, dirname, filename, replace, 
     if(err)
       console.error(chalk.blue.bold('Notice'), `file ${filename} not founded in ${parentTargetDir}/${dirname}`);
     else {
-      if (/="\/local\/dist\/<\?=\$GLOBALS/gim.test(data)) {
+      if (/="\/dist\/<\?=\$GLOBALS/gim.test(data)) {
         console.error(chalk.red.bold('Attention'), `snippet was added before in ${parentTargetDir}/${dirname}/${filename}`);
       } else {
         let result = data.replace(re, addSnippet);

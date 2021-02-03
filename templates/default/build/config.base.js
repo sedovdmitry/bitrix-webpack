@@ -8,8 +8,8 @@ module.exports = {
     // entry points of webpack, in vendor.js is for common styles and js
     // in custom.js is for unique styles and js of project
     entry: {
-        vendor: path.resolve(ROOT_DIR, 'local', 'src', 'webpack_vendor.js'),
-        custom:  path.resolve(ROOT_DIR, 'local', 'src', 'webpack_custom.js'),
+        vendor: path.resolve(ROOT_DIR, 'src', 'webpack_vendor.js'),
+        custom:  path.resolve(ROOT_DIR, 'src', 'webpack_custom.js'),
     },
     // where webpack search dependencies:
     resolve: {

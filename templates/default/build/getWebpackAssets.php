@@ -1,6 +1,6 @@
 <?php
 // parsing file with current hashes bundled-files
-$hashes = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT']."/local/dist/stats.json"), true);
+$hashes = json_decode(file_get_contents($_SERVER['DOCUMENT_ROOT']."/dist/stats.json"), true);
 
 $GLOBALS['VENDOR_STYLES'] = '';
 $GLOBALS['VENDOR_SCRIPTS'] = '';

@@ -11,7 +11,7 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const { StatsWriterPlugin } = require("webpack-stats-plugin");
 
 const ROOT_DIR = path.resolve(__dirname, '../');
-const DIST_DIR = path.resolve(ROOT_DIR, 'local', 'dist');
+const DIST_DIR = path.resolve(ROOT_DIR, 'dist');
 
 module.exports = merge(baseConfig, {
     mode: 'production',
