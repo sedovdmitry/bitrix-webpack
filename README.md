@@ -109,7 +109,7 @@ package.json
 
 ```js
 // vendor styles
-import '../../node_modules/uikit/dist/css/uikit.css'
+import '../node_modules/uikit/dist/css/uikit.css'
 
 // vendor js
 // set uikit in global variable
@@ -123,13 +123,13 @@ window.UIkit = UIkit;
 
 ```js
 // styles
-import '../../custom/css/example.css';
+import '../custom/css/example.css';
 
 // js
-import '../../custom/js/hello_webpack';
+import '../custom/js/hello_webpack';
 
 // vue
-import '../../custom/vue/main';
+import '../custom/vue/main';
 ```
 
 Посмотрите и исправьте если нужно файл `.browserlistrc`, чтобы добавить или убрать поддержку браузеров. По умолчанию включена поддержка браузеров, начиная с IE11.
