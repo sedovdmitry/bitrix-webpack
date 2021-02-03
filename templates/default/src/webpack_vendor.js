@@ -1,5 +1,5 @@
 // vendor styles
-import '../../node_modules/uikit/dist/css/uikit.css'
+import '../node_modules/uikit/dist/css/uikit.css'
 
 // vendor js
 
@@ -7,6 +7,6 @@ import '../../node_modules/uikit/dist/css/uikit.css'
 import UIkit from 'uikit'
 window.UIkit = UIkit;
 
-// custom icons
-//import Icons from '../../node_modules/uikit/dist/js/uikit-icons';
-//UIkit.use(Icons);
+// icons
+import Icons from '../node_modules/uikit/dist/js/uikit-icons';
+UIkit.use(Icons);
