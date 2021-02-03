@@ -1,6 +1,6 @@
 {
   "name": "bitrix-webpack",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "Автоматическая подготовка и настройка Webpack4 для Bitrix",
   "main": "src/index.js",
   "bin": {

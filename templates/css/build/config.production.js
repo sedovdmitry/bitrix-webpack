@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const baseConfig = require('./config.base.js');
-const UglifyJSWebpackPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const BundleAnalyzer = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const autoprefixer = require('autoprefixer');
@@ -24,11 +24,11 @@ module.exports = merge(baseConfig, {
         chunkFilename: '[name].[chunkhash].js',
     },
     optimization: {
+        minimize: true,
         minimizer: [
-            new UglifyJSWebpackPlugin({
-                cache: true,
+            new TerserPlugin({
+                test: /\.js(\?.*)?$/i,
                 parallel: true,
-                sourceMap: true
             }),
             new OptimizeCSSAssetsPlugin({})
         ]
